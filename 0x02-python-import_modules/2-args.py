@@ -12,7 +12,7 @@ def main():
         print("{:d} argument:".format(lenght))
         print("{}: {}".format(lenght, sys.argv[1]))
     else:
-        print("{:d} argument:".format(lenght))
+        print("{:d} arguments:".format(lenght))
         while i <= lenght:
             print("{}: {}".format(i, sys.argv[i]))
             i += 1
