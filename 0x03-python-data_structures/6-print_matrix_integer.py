@@ -2,10 +2,9 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    if matrix == None:
-        return
-
-    for a,b,c in matrix:
-        print("{:d}".format(a), end=' ')
-        print("{:d}".format(b), end=' ')
-        print("{:d}".format(c))
+    for arr in matrix:
+        for i in range(len(arr)):
+            print("{:d}".format(arr[i]), end="")
+            if i != len(arr) - 1:
+                print(" ", end="")
+        print()
