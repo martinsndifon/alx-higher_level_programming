@@ -8,7 +8,7 @@ def main():
 
     if argc != 4:
         print("Usage: {} <a> <operator> <b>".format(argv[0]))
-        exit (1)
+        exit(1)
 
     a = int(argv[1])
     b = int(argv[3])
@@ -23,7 +23,7 @@ def main():
         print("{} {} {} = {}".format(argv[1], argv[2], argv[3], div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-        exit (1)
+        exit(1)
 
 
 if __name__ == "__main__":
