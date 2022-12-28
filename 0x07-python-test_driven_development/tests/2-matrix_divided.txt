@@ -1,0 +1,91 @@
+	Matrix Division Test
+====================================
+# This is a test for the matrix division module
+
+# import the module
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+#Test Cases
+>>> matrix = [[1,2,3], [4,5,6]]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> matrix = [[1.4,2,3.3], [4,5.1,6]]
+>>> print(matrix_divided(matrix, 3))
+[[0.47, 0.67, 1.1], [1.33, 1.7, 2.0]]
+
+>>> matrix = [[1,2,3], [3,4,5], [5,6,7]]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.0, 1.33, 1.67], [1.67, 2.0, 2.33]]
+
+>>> matrix = [1,2,3,4,5]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1.4,2,3.3], 4,5,6]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = []
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = (1, 2, 3, 4, 5)
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = "string"
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = 4
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1,2,3], []]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix = [[1,2,3], [3,"four", "five"]]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1,2,3], [3, four, 5]]
+Traceback (most recent call last):
+...
+NameError: name 'four' is not defined
+
+>>> matrix = [[1,2,3], [3,4,5]]
+>>> print(matrix_divided(matrix, 3.2))
+[[0.31, 0.62, 0.94], [0.94, 1.25, 1.56]]
+
+>>> print(matrix_divided(matrix, "three"))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> print(matrix_divided(matrix, three))
+Traceback (most recent call last):
+...
+NameError: name 'three' is not defined
+
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
