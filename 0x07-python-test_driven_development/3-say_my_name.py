@@ -6,8 +6,8 @@ A module that prints first_name and last_name, with last_name as an
 optional argument
 """
 
-def say_my_name(first_name, last_name=""):
 
+def say_my_name(first_name, last_name=""):
 
     """
     This module prints your first and last names

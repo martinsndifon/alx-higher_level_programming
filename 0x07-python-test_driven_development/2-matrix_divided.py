@@ -7,8 +7,8 @@ elements of a matrix. Matrix must be a list of integers
 of floats, each row of the matrix must be of the same size.
 """
 
-def matrix_divided(matrix, div):
 
+def matrix_divided(matrix, div):
 
     """
     matrix_divided - divideds all elements of a matrix.

@@ -5,8 +5,8 @@
 A module that prints a square using the '#' symbol
 """
 
-def print_square(size):
 
+def print_square(size):
 
     """
     prints a square uning the '#' symbol with size, size
