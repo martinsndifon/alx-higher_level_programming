@@ -3,7 +3,7 @@
 
 """
 This module computes basic calculations,
-it takes integers and floats types and 
+it takes integers and floats types and
 returns an integer.
 """
 

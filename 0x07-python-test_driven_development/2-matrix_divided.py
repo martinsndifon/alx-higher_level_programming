@@ -8,6 +8,8 @@ of floats, each row of the matrix must be of the same size.
 """
 
 def matrix_divided(matrix, div):
+
+
     """
     matrix_divided - divideds all elements of a matrix.
     div: must be a number(integer of float)
@@ -36,7 +38,7 @@ def matrix_divided(matrix, div):
         else:
             continue
         break
-    
+
     if not number:
         raise TypeError(msg)
 
@@ -49,4 +51,4 @@ def matrix_divided(matrix, div):
     if not div:
         raise ZeroDivisionError("division by zero")
 
-    return list(list(map(lambda n: round(n / div, 2), item)) for item in matrix)
+    return list(list(map(lambda n: round(n/div, 2), item)) for item in matrix)
