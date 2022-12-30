@@ -1,0 +1,44 @@
+	text_indentation module Test
+===========================================
+# This module prints two new lines after certain characters
+
+# import the module for testing
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test Cases
+
+>>> text_indentation("martins.ndifon? mgbe:evareh emmanuel. michael?ifere")
+martins.
+<BLANKLINE>
+ndifon?
+<BLANKLINE>
+mgbe:
+<BLANKLINE>
+evareh emmanuel.
+<BLANKLINE>
+michael?
+<BLANKLINE>
+ifere
+
+>>> text_indentation("martins ndifon is an awesome software engineer")
+martins ndifon is an awesome software engineer
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation((1, 3, 4))
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(["one", "two", 3])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(one)
+Traceback (most recent call last):
+...
+NameError: name 'one' is not defined
