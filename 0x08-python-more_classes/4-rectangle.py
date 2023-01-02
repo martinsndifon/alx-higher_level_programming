@@ -105,6 +105,6 @@ class Rectangle:
         w, h = obj.split()
         w = w[10:]
         w = int(w[:len(w) - 1])
-        h = int(h[:len(h) -1])
+        h = int(h[:len(h) - 1])
 
         return cls(w, h)
