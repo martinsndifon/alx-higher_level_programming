@@ -63,5 +63,4 @@ def n_queen():
     print_result(ans)
 
 
-
 n_queen()
