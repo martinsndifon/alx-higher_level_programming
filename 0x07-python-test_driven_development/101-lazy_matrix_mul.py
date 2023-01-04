@@ -8,7 +8,7 @@ import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
-    
+
     """this function multiplies a matrix
     - m_a and m_b must be list of list of integers of floats
     - m_a and m_b cannot be empty
@@ -18,18 +18,18 @@ def lazy_matrix_mul(m_a, m_b):
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     if type(m_b) is not list:
-            raise TypeError("m_b must be a list")
+        raise TypeError("m_b must be a list")
 
     if not all(isinstance(element, list) for element in m_a):
         raise TypeError("m_a must be a list of lists")
     if not all(isinstance(element, list) for element in m_b):
-            raise TypeError("m_b must be a list of lists")
+        raise TypeError("m_b must be a list of lists")
 
     if not len(m_a) or all(len(arr) == 0 for arr in m_a):
         raise ValueError("m_a can't be empty")
     if not len(m_b) or all(len(arr) == 0 for arr in m_b):
         raise ValueError("m_b can't be empty")
-    
+
     number_a = True
 
     for arr in m_a:
@@ -43,7 +43,6 @@ def lazy_matrix_mul(m_a, m_b):
 
     if not number_a:
         raise TypeError("m_a should contain only integers or floats")
-
 
     number_b = True
     for arr in m_b:
