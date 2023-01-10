@@ -11,7 +11,7 @@ def pascal_triangle(n):
 
     res = [[1]]
 
-    for i in range (n - 1):
+    for i in range(n - 1):
         temp = [0] + res[-1] + [0]
         row = []
 
@@ -20,4 +20,3 @@ def pascal_triangle(n):
         res.append(row)
 
     return res
-
