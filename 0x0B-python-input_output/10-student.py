@@ -15,7 +15,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """converts the class to json"""
-    
+
         if type(attrs) is list and all(type(i) is str for i in attrs):
             return {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__
