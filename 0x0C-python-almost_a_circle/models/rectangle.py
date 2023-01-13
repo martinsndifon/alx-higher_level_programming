@@ -65,7 +65,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-
     @property
     def x(self):
         """Get the value of the private instance field; x"""
@@ -79,7 +78,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
-
 
     @property
     def y(self):
@@ -103,3 +101,9 @@ class Rectangle(Base):
         """Prints in stdout the rectangle instance with the character #"""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """prints the string representation of the class rectangle"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.__height)
