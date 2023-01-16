@@ -128,3 +128,8 @@ class Rectangle(Base):
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of the Rectangle instance"""
+        keys = ['id', 'width', 'height', 'x', 'y']
+        return dict((k, getattr(self, k)) for k in dir(self) if k in keys)
