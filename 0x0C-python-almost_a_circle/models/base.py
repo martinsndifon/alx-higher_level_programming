@@ -55,3 +55,16 @@ class Base:
             fake = cls(3)
         fake.update(**dictionary)
         return fake
+
+    @classmethod
+    def load_from_file(cls):
+        """Converts json file to list of instances"""
+        instances = []
+        try:
+            with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
+                items = cls.from_json_string(f.read())
+                for i in items:
+                    instances.append(cls.create(**i))
+            return instances
+        except Exception:
+            return []
