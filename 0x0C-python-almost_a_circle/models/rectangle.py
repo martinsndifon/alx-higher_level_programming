@@ -118,13 +118,13 @@ class Rectangle(Base):
                 if i == 0:
                     self.id = value
                 elif i == 1:
-                    self.__width = value
+                    self.width = value
                 elif i == 2:
-                    self.__height = value
+                    self.height = value
                 elif i == 3:
-                    self.__x = value
+                    self.x = value
                 elif i == 4:
-                    self.__y = value
+                    self.y = value
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
