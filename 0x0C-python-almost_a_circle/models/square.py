@@ -46,3 +46,8 @@ class Square(Rectangle):
                     self.height = v
                 else:
                     setattr(self, k, v)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of an instance of Square"""
+        keys = ['id', 'size', 'x', 'y']
+        return dict((k, getattr(self, k)) for k in dir(self) if k in keys)
