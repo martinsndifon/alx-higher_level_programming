@@ -2,10 +2,10 @@
 
 const args = process.argv;
 
-a = +args[2];
-b = +args[3];
+const a = +args[2];
+const b = +args[3];
 
-add(a , b);
+add(a, b);
 
 function add (a, b) {
   const sum = a + b;
