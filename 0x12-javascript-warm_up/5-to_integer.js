@@ -1,10 +1,9 @@
 #!/usr/bin/node
 
-const process = require('node:process');
-
 const args = process.argv;
+const len = process.argv.length;
 
-if (args.length === 2) {
+if (len === 2) {
   console.log('Not a number');
 } else {
   if (isNaN(args[2])) {
