@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
-const process = require('node:process');
+const len = process.argv.length;
 
-const args = process.argv;
-
-if (args.length === 2) {
+if (len === 2) {
   console.log('No argument');
 } else {
   console.log(args[2]);
