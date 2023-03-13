@@ -1,16 +1,16 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 const process = require('node:process');
 
-let args = process.argv;
+const args = process.argv;
 
 if (args.length === 2) {
-	console.log('Not a number');
+  console.log('Not a number');
 } else {
-	if (isNaN(args[2])) {
-		console.log('Not a number');
-	} else {
-		let num = parseInt(args[2]);
-		console.log(`My number: ${num}`);
-	}
+  if (isNaN(args[2])) {
+    console.log('Not a number');
+  } else {
+    const num = parseInt(args[2]);
+    console.log(`My number: ${num}`);
+  }
 }
