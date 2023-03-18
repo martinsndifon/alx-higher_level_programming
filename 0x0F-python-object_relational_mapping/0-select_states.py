@@ -5,6 +5,7 @@
 import MySQLdb
 from sys import argv
 
+
 def main():
     """Start of program"""
 
@@ -16,6 +17,7 @@ def main():
     rows = cur.fetchall()
     for row in rows:
         print(row)
+
 
 if __name__ == '__main__':
     main()
