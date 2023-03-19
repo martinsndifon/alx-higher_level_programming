@@ -7,6 +7,7 @@ City model - will be the base model for all cities
 from sqlalchemy import Integer, String, Column
 from sqlalchemy.sql.schema import ForeignKey
 from model_state import State, Base
+from sqlalchemy.orm import relationship
 
 
 class City(Base):
