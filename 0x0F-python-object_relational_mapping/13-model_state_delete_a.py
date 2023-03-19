@@ -17,6 +17,6 @@ if __name__ == "__main__":
     state = session.query(State).filter(
             State.name.contains('a'))
 
-    if states:
-        states.delete(synchronize_session=False)
+    if state
+        state.delete(synchronize_session=False)
         session.commit()
