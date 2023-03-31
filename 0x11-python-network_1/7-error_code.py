@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-Sends a POST request to passed URL with email as parameter and displays
-the body of the response. Handles urllib.error.HTTPError
+Sends a request to passed URL and displays the body of the response
+based on status_code
 """
 
 import requests
