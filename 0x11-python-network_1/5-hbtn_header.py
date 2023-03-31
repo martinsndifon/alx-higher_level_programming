@@ -7,7 +7,7 @@ import sys
 
 def main():
     result = requests.get(sys.argv[1])
-    header = result.headers["X-Request-Id"]
+    header = result.headers.get("X-Request-Id")
 
     print(header)
 
