@@ -12,7 +12,7 @@ def main():
     res = requests.get(url, data=query)
     objs = res.json()
 
-    for obj in objs:
+    for obj in objs[:10]:
         commit = obj['commit']
         author = commit['author']
         print(f"{obj.get('sha')}:", author.get('name'))
