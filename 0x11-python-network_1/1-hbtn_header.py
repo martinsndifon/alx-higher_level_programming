@@ -4,7 +4,13 @@
 import urllib.request
 import sys
 
-with urllib.request.urlopen(sys.argv[1]) as response:
-    header = response.getheader("X-Request-Id")
 
-print(header)
+def main():
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        header = response.getheader("X-Request-Id")
+
+    print(header)
+
+
+if __name__ == '__main__':
+    main()
