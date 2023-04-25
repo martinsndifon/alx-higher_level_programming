@@ -9,14 +9,8 @@ request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    const newurl = JSON.parse(body).results[0].characters[15];
-    request(`${newurl}`, (error, response, body) => {
-      if (error) {
-        console.log(error);
-      } else {
-        const films = JSON.parse(body).films;
-        console.log(films.length);
-      }
-    });
+    let data = JSON.parse(body).results;
+    data = data.filter(({ characters }) => characters.includes('https://swapi-api.alx-tools.com/api/people/18/'));
+    console.log(data.length);
   }
 });
