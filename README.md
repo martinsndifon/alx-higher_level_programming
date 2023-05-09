@@ -1,1 +1,1 @@
-This is a temporary readme file that will be updated in a later time
+This repository contains files created from my time at ALX learning the python programming language. python is awesome.
